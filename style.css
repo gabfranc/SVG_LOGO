@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body{
+  display: flex;
+  flex: auto;
+  position: relative;
+  flex-direction: row;
+  background-color: rgb(245, 234, 221);
+  margin-top: 10px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+header {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20vh;
+  display: flex;
+  position: absolute;
+}
+@keyframes flicker {
+  0%, 50% {opacity: 1;}
+  30% {opacity: 0.5;}
+}
+
+svg{
+  display: inline-block;
+  mix-blend-mode: multiply;
+  width:400px;
+  height: 250px;  
+  animation: flicker 6.5s infinite;
+  overflow: hidden;
+}
+
+svg path{
+  position: fixed;
+  cursor: pointer; 
+}
+
+@keyframes slide {
+  0%, 100%{
+    right: 0%;
+  }
+  50% {
+    right: 50%;
+  }
+
+}
+svg:hover{
+  animation: flicker 0.5s infinite;
+  transform: scale(1.2);
+  transition: transform 0.5s ease-in-out;
+}
+
+svg:active{
+  filter: hue-rotate(2);
+}
+
+#swoosh {
+  width: 400px;
+  height: 250px;
+  animation: flicker 2.5s infinite;
+}
+
+
+
+
+/** Multicoloured Logo**/
+.coloured{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  column-gap: 2vh;
+  margin-left: 20vh;
+}
+
+/*** Monochromatic Coloured Logo- Brown & White***/
+.mono{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  row-gap: 5vh;
+  margin-left: 20vh;
+}
+
+img {
+  height: 35vh;
+  width: 40vh;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px #803f3f;
+}
+
+/*** Monochromatic Coloured Logo-Black & White ***/
+
+.mono2{
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  row-gap: 5vh;
+  margin-left: 20vh;
+}
+
+.mono2 img {
+  height: 35vh;
+  width: 40vh;
+  overflow: visible;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px #7e5546;
+}
+
+/*** h2 labels ***/
+
+h2{
+  margin-top: 10vh;
+}
